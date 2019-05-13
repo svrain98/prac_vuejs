@@ -23,7 +23,8 @@
       // 전역 컴포넌트 등록
       Vue.component('my-global-component', {
         template: '<div>전역 컴포넌트 입니다.</div>'
-@@ -30,21 +27,18 @@ <h3>2번째 인스턴스 영역</h3>
+      });
+      var cmp= {
         template: '<div>지역 컴포넌트 입니다.</div>'
       };
       // 1번째 인스턴스
@@ -33,13 +34,11 @@
         components: {
           'my-local-component': cmp
         }
-      })
       });
       // 2번째 인스턴스
       // 두 번째 인스턴스
       new Vue({
         el: '#app2'
-      })
       });
     </script>
   </body>
